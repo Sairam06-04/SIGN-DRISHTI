@@ -1,0 +1,39 @@
+_______________________________________________________________________
+1. Data Collection (Scripts 1)
+_______________________________________________________________________
+
+This phase teaches the computer what each sign looks like.
+
+Capture Landmarks: The script 1_data_collection.py uses your webcam and the MediaPipe Hands library to look at your hand. It doesn't capture the entire image; instead, it extracts 63 specific data points (x, y, z coordinates), or landmarks, that trace the position of your fingers and wrist.
+
+Normalization: These 63 points are normalized (adjusted relative to your wrist position) so the model recognizes the sign no matter how far your hand is from the camera.
+
+Data Storage: You capture these normalized 63 points repeatedly (e.g., 100 times) for each sign (e.g., "hello"). This data is saved to sign_language_data.csv.
+
+
+______________________________________________________________________
+2. Model Training (Script 2)
+______________________________________________________________________
+This phase builds the "brain" of the system.
+Loading Features: The script 2_train_model.py loads the raw landmark coordinates (the "features") and their corresponding names (the "labels") from the CSV file.
+Training the Model: It uses a machine learning algorithm, Logistic Regression, to analyze the data. The model learns the relationship between the set of 63 coordinates and the correct sign name ("hello," "yes," etc.).
+
+Saving the Brain: Once trained, the model is saved as a file (sign_language_model.p) in the model/ folder. This file is the "trained brain" that the main application will use.
+
+
+_______________________________________________________________________
+3. Real-Time Application (Script 3 & app_pyside.py)
+_______________________________________________________________________
+
+This is the final execution phase where your PySide GUI runs.
+Model Loading: The app_pyside.py file first loads the pre-trained model (sign_language_model.p).
+Live Prediction Loop: The Video Worker Thread constantly captures frames from the webcam. For every frame:
+It extracts the 63 hand landmarks (just like in data collection).
+It feeds these 63 points into the loaded Logistic Regression model.
+
+Stability Check: The model returns a prediction ("hello"). The system uses a prediction buffer to check if the same sign has been predicted consistently for several frames (e.g., 15 times). This stabilizes the output, preventing jittery predictions.
+Sequential Sentence Building: When a new, stable sign is recognized (e.g., "I"), it's appended to the Recognized Sentence.
+
+Translation & Voice:
+Translation: When you click the Translate button, the English sentence is sent to the googletrans library, converted to the target language (e.g., Hindi), and displayed.
+Text-to-Voice: When you click the Speak Text button, the currently displayed text (English or translated) is converted to an audio file using gTTS and played back instantly using a separate thread with pygame.mixer for reliable, non-blocking playback.
