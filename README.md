@@ -18,6 +18,7 @@ The project is organized into three main functional folders—**scripts**, **dat
 
 RealTime_Sign_Recognition/ 
 ![Project Structure](Project_Directory.jpg)
+<img src="Project_Directory.jpg" alt="Project Structure" width="300"/>
 
 
 ---
