@@ -16,8 +16,8 @@ A desktop application built with **PySide6** (Qt) that uses **Machine Learning (
 
 The project is organized into three main functional folders—**scripts**, **data**, and **model**—to separate the application logic from the training workflow.
 
-RealTime_Sign_Recognition/ <img src="Project_Directory.jpg" alt="Project Structure" width="600"/>
-
+RealTime_Sign_Recognition/ 
+<img src="Project_Directory.jpg" alt="Project Structure" width="600"/>
 
 ---
 
