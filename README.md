@@ -76,5 +76,12 @@ python app_pyside.py
 ```
 The application will launch. Click START CAMERA, perform your trained signs, and test the full Translation and Text to Voice functionality.
 
+## Project Contributors
+
+1. Sairam Shetti – Core Algorithm, Feature Implementation, System Integration
+2. Srikanth T J – Architecture, Normalization Logic, Report Writing
+3. SHREYAS BS – OpenCV UI, Testing, Code Review
+4. Sai Koushik pk – Environment Setup, Performance Optimization, File Handling
+
 ### 🤝Contribution
 **Contributions, bug reports, and feature suggestions are highly welcome! Please feel free to open an issue or submit a pull request.*
