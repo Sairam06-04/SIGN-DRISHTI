@@ -1,6 +1,11 @@
 # 🤖 Real-Time Sequential Sign Recognition and Translation
 
-A desktop application built with **PySide6** (Qt) that uses **Machine Learning (Logistic Regression)** and **MediaPipe** to detect sign language gestures in real-time, converts them into a sentence, and provides text-to-speech (TTS) and translation services.
+This project focuses on real-time sign language recognition and translation using Machine Learning, MediaPipe, and Computer Vision techniques. The system detects hand gestures through a webcam, converts recognized gestures into meaningful sentences, and provides multilingual translation and text-to-speech support to improve communication accessibility.
+
+The application was developed using Python, PySide6 (Qt), MediaPipe Hands, Logistic Regression, OpenCV, Google Translate API, gTTS, and Pygame Mixer.
+
+**NOTE:**
+This project was also developed with the support of AI-assisted development tools, including Google Gemini, for rapid prototyping, debugging assistance, workflow acceleration, and development support.
 
 ## ✨ Features
 
