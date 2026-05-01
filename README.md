@@ -4,6 +4,7 @@ This project focuses on real-time sign language recognition and translation usin
 
 The application was developed using Python, PySide6 (Qt), MediaPipe Hands, Logistic Regression, OpenCV, Google Translate API, gTTS, and Pygame Mixer.
 
+---
 **NOTE:**
 This project was also developed with the support of AI-assisted development tools, including Google Gemini, for rapid prototyping, debugging assistance, workflow acceleration, and development support.
 
